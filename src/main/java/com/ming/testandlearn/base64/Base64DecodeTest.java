@@ -10,9 +10,6 @@ public class Base64DecodeTest {
     public static void main(String[] args) {
         //Base64.getDecoder().decode(getEncodeContentWithEnter());
         Base64.getDecoder().decode(getEncodeContent());
-
-
-
     }
 
     private static String getEncodeContent(){

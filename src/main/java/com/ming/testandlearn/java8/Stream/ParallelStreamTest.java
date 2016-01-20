@@ -1,4 +1,4 @@
-package com.ming.testandlearn.Stream;
+package com.ming.testandlearn.java8.Stream;
 
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
