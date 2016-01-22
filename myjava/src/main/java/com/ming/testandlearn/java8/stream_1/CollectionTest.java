@@ -1,4 +1,4 @@
-package com.ming.testandlearn.java8.Stream;
+package com.ming.testandlearn.java8.stream_1;
 
 import java.util.Arrays;
 import java.util.List;

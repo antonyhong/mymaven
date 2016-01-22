@@ -1,4 +1,4 @@
-package com.ming.testandlearn.java8.Stream;
+package com.ming.testandlearn.java8.stream_1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -53,9 +53,10 @@ public class StreamTest {
                 .collect(Collectors.toMap(stu->stu.name,p->p));
 
 
-        //grade1.classes.stream().max()
-        //grade1.classes.stream().min()
-        //grade1.classes.stream().reduce()
+//        grade1.classes.stream().min();
+//        grade1.classes.stream().max();
+//        grade1.classes.stream().reduce();
+
         /** 都是使用reduce()*/
         System.out.println(stuNameThatAgeLargerThan11);
         System.out.println(mapName2Stu);

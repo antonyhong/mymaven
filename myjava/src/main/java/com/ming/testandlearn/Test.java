@@ -1,5 +1,7 @@
 package com.ming.testandlearn;
 
+import aQute.bnd.build.model.conversions.Converter;
+
 import java.util.Optional;
 
 /**
@@ -13,5 +15,11 @@ public class Test {
         //map.computeIfAbsent()
 
 
+
+        int num = 1;
+        Converter<Integer, String> stringConverter =
+                (from) -> Integer.valueOf(from + num);
+        /**num 使用lambda  引用的变量应该是(不用final标识也可) 是final的*/
+       //num = 3;
     }
 }
