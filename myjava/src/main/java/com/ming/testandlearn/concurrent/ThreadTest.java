@@ -17,7 +17,9 @@ public class ThreadTest {
                         Thread.sleep(100);
                     } catch (InterruptedException e) {
                         //e.printStackTrace();
-                        /**interrupt()请求中断这个线程*/
+                        /**interrupt()请求中断这个线程,中断=> 线程会在安全的时候停止线程
+                         *
+                         */
                         Thread.currentThread().interrupt();
                     }
                     System.out.println("i:"+i);
@@ -33,16 +35,20 @@ public class ThreadTest {
 
         thread.start();
 
-        try {
-            //while(!(ok to proceed))
-            thread.wait();
-            /***do something*/
-            thread.notifyAll();
+//        try {
+//            //while(!(ok to proceed))
+//            thread.wait();
+//            /***do something*/
+//            thread.notifyAll();
+//
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
+        /**对象不安全*/
+        //thread.stop();
+        /***容易死锁*/
+        //thread.suspend();
         Thread.interrupted();
 
 
