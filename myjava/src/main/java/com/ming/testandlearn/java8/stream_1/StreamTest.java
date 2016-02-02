@@ -44,19 +44,13 @@ public class StreamTest {
                         .filter(stu -> stu.age > 11)
                         .collect(groupingBy(stu->stu.age));/****并行*/
 
-
-
-
-
         Map<String,Student_inner> mapName2Stu = grade1.classes.stream().flatMap(c -> c.students.stream())
                 .filter(stu->stu.age >11)
                 .collect(Collectors.toMap(stu->stu.name,p->p));
 
-
 //        grade1.classes.stream().min();
 //        grade1.classes.stream().max();
 //        grade1.classes.stream().reduce();
-
         /** 都是使用reduce()*/
         System.out.println(stuNameThatAgeLargerThan11);
         System.out.println(mapName2Stu);
