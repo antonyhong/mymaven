@@ -1,4 +1,4 @@
-package com.ming.testandlearn.xml;
+package com.ming.testandlearn.xml.jaxb;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -9,7 +9,7 @@ import java.io.*;
 /**
  * Created by hongyongming on 2016/2/17.
  */
-public class XmlUtil {
+public class JaxbXmlUtil {
 
     /**
      * 将对象直接转换成String类型的 XML输出
@@ -70,14 +70,14 @@ public class XmlUtil {
     /**
      * 将String类型的xml转换成对象
      */
-    public static Object convertXmlStrToObject(Class clazz, String xmlStr) {
-        Object xmlObject = null;
+    public static <T> T convertXmlStrToObject(Class<T> clazz, String xmlStr) {
+        T xmlObject = null;
         try {
             JAXBContext context = JAXBContext.newInstance(clazz);
             // 进行将Xml转成对象的核心接口
             Unmarshaller unmarshaller = context.createUnmarshaller();
             StringReader sr = new StringReader(xmlStr);
-            xmlObject = unmarshaller.unmarshal(sr);
+            xmlObject = (T)unmarshaller.unmarshal(sr);
         } catch (JAXBException e) {
             e.printStackTrace();
         }
