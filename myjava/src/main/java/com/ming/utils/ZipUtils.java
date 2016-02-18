@@ -1,4 +1,4 @@
-package com.ming.zip;
+package com.ming.utils;
 
 
 import java.io.*;

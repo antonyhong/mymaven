@@ -1,6 +1,7 @@
 package com.ming.testandlearn.xml.jaxb;
 
 import com.ming.utils.DateUtils;
+import com.ming.utils.JaxbXmlUtil;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -127,7 +128,7 @@ public class JaxbXmlBean {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         JaxbXmlBean jaxbXmlBean = new JaxbXmlBean("BeanName", "4.2.2.2", DateUtils.parseAllFormat("2015-02-02"));
         jaxbXmlBean.setSubBeans(new ArrayList<SubBean>(){{
                 add(new SubBean("name1","des1"));
@@ -135,10 +136,10 @@ public class JaxbXmlBean {
             add(new SubBean("name3","des3"));
         }});
 
-        String result = JaxbXmlUtil.convertToXml(jaxbXmlBean);
+        String result = JaxbXmlUtil.objectToXml(jaxbXmlBean);
         System.out.println(result);
 
-        JaxbXmlBean jaxbXmlBeanFromStr =  JaxbXmlUtil.convertXmlStrToObject(JaxbXmlBean.class, result);
+        JaxbXmlBean jaxbXmlBeanFromStr =  JaxbXmlUtil.xmlToObject(JaxbXmlBean.class, result);
 
 
         System.out.println(jaxbXmlBeanFromStr);
