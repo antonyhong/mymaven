@@ -1,5 +1,6 @@
 package com.ming.testandlearn.xml.jaxb;
 
+
 import com.ming.utils.DateUtils;
 import com.ming.utils.JaxbXmlUtil;
 

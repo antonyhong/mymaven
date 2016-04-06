@@ -21,9 +21,10 @@ public class MyWorkBook {
 
     public MyWorkBook() {
         workbook = new HSSFWorkbook();
-    }
+    };
 
     public MyWorkBook(Workbook workbook) {
+
         this.workbook = workbook;
     }
 
