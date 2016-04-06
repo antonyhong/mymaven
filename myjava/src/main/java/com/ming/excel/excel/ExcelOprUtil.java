@@ -1,4 +1,4 @@
-package com.ming.excel;
+package com.ming.excel.excel;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;

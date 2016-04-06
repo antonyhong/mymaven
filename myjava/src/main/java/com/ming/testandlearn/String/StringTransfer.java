@@ -1,10 +1,7 @@
-package com.ming.String;
-
-import sun.swing.plaf.synth.DefaultSynthStyle;
+package com.ming.testandlearn.String;
 
 import java.io.ByteArrayInputStream;
 import java.nio.charset.Charset;
-import java.util.Base64;
 
 /**
  * Created by hongyongming on 2016/2/18.

@@ -1,4 +1,4 @@
-package com.ming.excel;
+package com.ming.excel.excel;
 
 import org.apache.commons.beanutils.PropertyUtilsBean;
 import org.apache.commons.lang3.StringUtils;

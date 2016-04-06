@@ -1,4 +1,4 @@
-package com.ming.excel;
+package com.ming.excel.excel;
 
 
 import com.google.common.collect.BiMap;

@@ -1,4 +1,4 @@
-package com.ming.String;
+package com.ming.testandlearn.String;
 
 import java.util.ArrayList;
 import java.util.List;
