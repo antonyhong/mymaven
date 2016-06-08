@@ -28,7 +28,6 @@ import java.util.List;
  *
  *
  * */
-//@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "Bean")
 @XmlType(propOrder = {
         "beanName",
@@ -52,7 +51,7 @@ public class JaxbXmlBean {
         this.version = version;
         this.createTime = createTime;
     }
-    @XmlElement(name = "beanName")
+    @XmlElement(name = "beanName",namespace = "ceb")
     public String getBeanName() {
         return beanName;
     }
