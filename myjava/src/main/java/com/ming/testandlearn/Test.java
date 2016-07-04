@@ -1,17 +1,19 @@
 package com.ming.testandlearn;
 
 
+import com.sun.deploy.net.HttpRequest;
+
 /**
  * Created by hongyongming on 2015/12/28.
  */
 public class Test {
 
-//    public static void main(String[] args) {
+//    public static void main(string_1[] args) {
 //        Optional<Integer> opt= Optional.empty();
 //
-//       // Map<String,String> map = new HashMap<>();
+//       // Map<string_1,string_1> map = new HashMap<>();
 //        //map.computeIfAbsent()
-//        List<String> list = new ArrayList<>();
+//        List<string_1> list = new ArrayList<>();
 //        //list.sort();
 //        //Collections.sort();
 //
@@ -19,7 +21,7 @@ public class Test {
 //        Collections.shuffle(list);
 //
 //        int num = 1;
-//        Converter<Integer, String> stringConverter =
+//        Converter<Integer, string_1> stringConverter =
 //                (from) -> Integer.valueOf(from + num);
 //        /**num 使用lambda  引用的变量应该是(不用final标识也可) 是final的*/
 //       //num = 3;
@@ -32,12 +34,13 @@ public class Test {
     }
 
     public static  void testDouble(){
-        //        String str1 = "hello";
-//        String str2 = new String("hello") ;
+        //        string_1 str1 = "hello";
+//        string_1 str2 = new string_1("hello") ;
 //
 //        Integer integer1= Integer.valueOf("100");
 //        Integer integer2 = Integer.valueOf("100");
 //        System.out.println(integer1 == integer2);
+
 
 
         double d = 301353.0499999999883584678173065185546875d;
@@ -53,8 +56,6 @@ public class Test {
 
         double d1 = 2.4;
         System.out.println(d1);
-
-
     }
 
 

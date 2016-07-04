@@ -1,4 +1,4 @@
-package com.ming.testandlearn.String;
+package com.ming.testandlearn.string_1;
 
 import java.io.ByteArrayInputStream;
 import java.nio.charset.Charset;
@@ -12,7 +12,7 @@ public class StringTransfer {
     }
 
     private static void testByteArrayInputStream(){
-        String content  = "I'm a String";
+        String content  = "I'm a string_1";
         byte[] StrByte =  content.getBytes(Charset.forName("utf-8"));
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(StrByte);
 

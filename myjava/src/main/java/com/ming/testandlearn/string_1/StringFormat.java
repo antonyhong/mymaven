@@ -1,4 +1,4 @@
-package com.ming.testandlearn.String;
+package com.ming.testandlearn.string_1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,15 +34,15 @@ public class StringFormat {
         String str1 = "欢迎";
         String str2 = "广州";
         for (int i = 0; i < 10; i++) {
-            //System.out.println(String.format("%s%s%s",str1,i,str2));
+            //System.out.println(string_1.format("%s%s%s",str1,i,str2));
         }
-        //System.out.println("string format耗时:"+ (System.currentTimeMillis()-start));
+        //System.out.println("string_1 format耗时:"+ (System.currentTimeMillis()-start));
 
 
         start = System.currentTimeMillis();
         for (int i = 0; i < 10; i++) {
             System.out.println(str1 + i + str2);
         }
-        System.out.println("string +耗时:" + (System.currentTimeMillis() - start));
+        System.out.println("string_1 +耗时:" + (System.currentTimeMillis() - start));
     }
 }
