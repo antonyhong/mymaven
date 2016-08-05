@@ -6,7 +6,10 @@ package com.ming.testandlearn.concurrent;
 public class LazzyInital {
 
     //private volatile FieldType field = new ComputeFieldValue();
-    /**double check*/
+    /**double check
+     *
+     * ref http://www.infoq.com/cn/articles/double-checked-locking-with-delay-initialization
+     * */
     private volatile  Integer integer;
     Integer getInteger(){
         Integer result = integer;

@@ -4,8 +4,8 @@ package com.ming;
  * Created by hongyongming on 2016/7/11.
  */
 public class Hanzi {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
        // String str = "helllo 你好!";
         //ongjiHanzi(str);
 
