@@ -1,6 +1,13 @@
 package com.ming.testandlearn;
 
 
+import org.apache.commons.lang3.RandomStringUtils;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.IntStream;
+
 /**
  * Created by hongyongming on 2015/12/28.
  */
@@ -28,7 +35,15 @@ public class Test {
 //    }
 
     public static void main(String[] args) {
-        testStringForamt();
+
+        Map<String,String> map = new HashMap<>();
+        map.put(null,"hello");
+        System.out.println(map.get(null));
+        //testStringForamt();
+        //IntStream.range(0,100).forEach(i-> System.out.println(RandomStringUtils.randomNumeric(10)));
+
+        //ConcurrentHashMap
+
     }
 
     public static  void testDouble(){
@@ -53,6 +68,8 @@ public class Test {
 
         double d1 = 2.4;
         System.out.println(d1);
+
+
 
 
     }
