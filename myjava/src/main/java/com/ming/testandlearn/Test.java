@@ -36,14 +36,19 @@ public class Test {
 
     public static void main(String[] args) {
 
-        Map<String,String> map = new HashMap<>();
-        map.put(null,"hello");
-        System.out.println(map.get(null));
+        //Map<String,String> map = new HashMap<>();
+        //map.put(null,"hello");
+        //System.out.println(map.get(null));
         //testStringForamt();
         //IntStream.range(0,100).forEach(i-> System.out.println(RandomStringUtils.randomNumeric(10)));
 
         //ConcurrentHashMap
+        test();
+    }
 
+    public static void test(){
+        String str = null;
+        System.out.println(str == null||str.equals("hel"));
     }
 
     public static  void testDouble(){
@@ -68,10 +73,6 @@ public class Test {
 
         double d1 = 2.4;
         System.out.println(d1);
-
-
-
-
     }
 
 
