@@ -18,6 +18,6 @@ public class net {
         String re = URLDecoder.decode(encodedUrl, "utf-8");
         System.out.println(re);
 
-        Proxy
+
     }
 }
