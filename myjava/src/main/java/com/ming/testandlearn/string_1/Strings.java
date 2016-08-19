@@ -1,4 +1,4 @@
-package com.ming.testandlearn.String;
+package com.ming.testandlearn.string_1;
 
 /**
  * Created by hongyongming on 2016/5/13.

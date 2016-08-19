@@ -9,12 +9,9 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ReentrantLockTest {
     public static void main(String[] args) {
         ReentrantLock lock = new ReentrantLock();
-
-
         /**可以new出多个condition*/
         Condition readcondition = lock.newCondition();
         Condition writecondition = lock.newCondition();
-
         try {
             /**
              * 一般采用以下写法
@@ -33,6 +30,12 @@ public class ReentrantLockTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        finally {
+            lock.unlock();
+        }
+    }
+
+    public static void reetrenLockTest(){
 
     }
 }

@@ -1,4 +1,4 @@
-package com.ming.testandlearn.String;
+package com.ming.testandlearn.string_1;
 
 import java.io.ByteArrayInputStream;
 import java.nio.charset.Charset;

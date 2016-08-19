@@ -43,10 +43,6 @@ public class ReflectTest {
         System.out.println();
         printFields(cl);
         System.out.println("}");
-
-
-
-
     }
 
     public static void printContructors(Class clz) {

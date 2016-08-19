@@ -1,7 +1,5 @@
 package com.ming.testandlearn.concurrent;
 
-import org.apache.el.parser.AstFalse;
-import sun.text.resources.cldr.ur.FormatData_ur;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,6 +11,11 @@ public class ThreadTest {
     public static void main(String[] args) throws InterruptedException {
         testJoin();
     }
+
+    public static void testWait(){
+
+    }
+
 
 
     public static void testIterrupt(){
@@ -77,9 +80,9 @@ public class ThreadTest {
         });
         t.start();
         /**2秒后会 合并过来*/
-        //t.join(2000);
+        t.join(2000);
         /**不会合并过来*/
-        t.join();
+        //t.join();
         System.out.println("method main end-----");
     }
 
