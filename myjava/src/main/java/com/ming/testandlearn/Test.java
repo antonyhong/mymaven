@@ -43,7 +43,10 @@ public class Test {
         //IntStream.range(0,100).forEach(i-> System.out.println(RandomStringUtils.randomNumeric(10)));
 
         //ConcurrentHashMap
-        test();
+      //  test();
+
+        System.out.println(System.getProperty("sun.boot.class.path"));
+
     }
 
     public static void test(){

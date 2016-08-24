@@ -1,4 +1,4 @@
-package com.ming.testandlearn.reflect.proxy;
+package com.ming.testandlearn.reflect.proxy.jdkproxy;
 
 /**
  * Created by HONGYONGMING on 2016/8/19.
