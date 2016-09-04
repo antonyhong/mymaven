@@ -1,19 +1,24 @@
 package com.ming.testandlearn;
 
 
-import com.sun.deploy.net.HttpRequest;
+import org.apache.commons.lang3.RandomStringUtils;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.IntStream;
 
 /**
  * Created by hongyongming on 2015/12/28.
  */
 public class Test {
 
-//    public static void main(string_1[] args) {
+//    public static void main(String[] args) {
 //        Optional<Integer> opt= Optional.empty();
 //
-//       // Map<string_1,string_1> map = new HashMap<>();
+//       // Map<String,String> map = new HashMap<>();
 //        //map.computeIfAbsent()
-//        List<string_1> list = new ArrayList<>();
+//        List<String> list = new ArrayList<>();
 //        //list.sort();
 //        //Collections.sort();
 //
@@ -21,7 +26,7 @@ public class Test {
 //        Collections.shuffle(list);
 //
 //        int num = 1;
-//        Converter<Integer, string_1> stringConverter =
+//        Converter<Integer, String> stringConverter =
 //                (from) -> Integer.valueOf(from + num);
 //        /**num 使用lambda  引用的变量应该是(不用final标识也可) 是final的*/
 //       //num = 3;
@@ -30,17 +35,32 @@ public class Test {
 //    }
 
     public static void main(String[] args) {
-        testStringForamt();
+
+        //Map<String,String> map = new HashMap<>();
+        //map.put(null,"hello");
+        //System.out.println(map.get(null));
+        //testStringForamt();
+        //IntStream.range(0,100).forEach(i-> System.out.println(RandomStringUtils.randomNumeric(10)));
+
+        //ConcurrentHashMap
+      //  test();
+
+        System.out.println(System.getProperty("sun.boot.class.path"));
+
+    }
+
+    public static void test(){
+        String str = null;
+        System.out.println(str == null||str.equals("hel"));
     }
 
     public static  void testDouble(){
-        //        string_1 str1 = "hello";
-//        string_1 str2 = new string_1("hello") ;
+        //        String str1 = "hello";
+//        String str2 = new String("hello") ;
 //
 //        Integer integer1= Integer.valueOf("100");
 //        Integer integer2 = Integer.valueOf("100");
 //        System.out.println(integer1 == integer2);
-
 
 
         double d = 301353.0499999999883584678173065185546875d;

@@ -1,8 +1,7 @@
-package com.ming.testandlearn.streamTest;
+package com.ming.testandlearn.io_test;
 
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.io.InputStream;
 
 /**
