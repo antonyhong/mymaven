@@ -8,7 +8,8 @@ import java.nio.charset.Charset;
  */
 public class StringTransfer {
     public static void main(String[] args) {
-        test();
+        testByteArrayInputStream();
+        //test();
     }
 
     private static void testByteArrayInputStream(){
