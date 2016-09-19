@@ -11,6 +11,7 @@
     <modules>
         <module>myjava</module>
         <module>mytools</module>
+        <module>myquartz</module>
     </modules>
 
 
