@@ -5,8 +5,8 @@ package com.ming.testandlearn;
  */
 public class Test2 {
     public static void main(String[] args) throws InterruptedException {
-//        String str = null;
-//        System.out.println(String.format("hello:%s",str));
+//        string_1 str = null;
+//        System.out.println(string_1.format("hello:%s",str));
         String sqlHeader = "INSERT IGNORE INTO `user` " +
                 "(`id`, `userZnName`, `headIcon`, `education`, `gender`, " +
                 "`departmentId`, `status`, `password`, `fax`, `email`, " +

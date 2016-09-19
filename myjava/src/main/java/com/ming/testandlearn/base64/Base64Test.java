@@ -13,7 +13,7 @@ public class Base64Test {
     public static void main(String[] args) throws IOException {
 
         String content = getStr();
-        //String encodeContent  = new BASE64Encoder().encode(xmlStr.getBytes(Constants.DEFAULT_CHARSET));
+        //string_1 encodeContent  = new BASE64Encoder().encode(xmlStr.getBytes(Constants.DEFAULT_CHARSET));
         String encode = new BASE64Encoder().encode(content.getBytes("UTF-8"));
         String encodeBuffer = new BASE64Encoder().encodeBuffer(content.getBytes("UTF-8"));
         String encodeGet =  new String(Base64.getEncoder().encode(content.getBytes("UTF-8")), "UTF-8");
@@ -26,32 +26,32 @@ public class Base64Test {
         System.out.println("encodeGet:\r\n"+encodeGet);
         System.out.println("-------------------------------------------------");
 
-        //decodeContent = new String(new BASE64Decoder().decodeBuffer(content), Constants.DEFAULT_CHARSET);
-//        String decode2 = new String(Base64.getDecoder().decode(encodeGet),"UTF-8");
+        //decodeContent = new string_1(new BASE64Decoder().decodeBuffer(content), Constants.DEFAULT_CHARSET);
+//        string_1 decode2 = new string_1(Base64.getDecoder().decode(encodeGet),"UTF-8");
 //        System.out.println("encodeGet=>decode2:\r\n"+decode2);
 //        System.out.println("-------------------------------------------------");
 //
-//        String decode = new String(new BASE64Decoder().decodeBuffer(encodeGet),"UTF-8");
+//        string_1 decode = new string_1(new BASE64Decoder().decodeBuffer(encodeGet),"UTF-8");
 //        System.out.println("encodeGet=>decode:\r\n"+decode);
 //        System.out.println("-------------------------------------------------");
 
         /**err**/
 
-        //String decode3 = new String(Base64.getDecoder().decode(encodeBuffer),"UTF-8");
+        //string_1 decode3 = new string_1(Base64.getDecoder().decode(encodeBuffer),"UTF-8");
         String decode3 = new String(Base64.getDecoder().decode(encodeBuffer.getBytes("UTF-8")),"UTF-8");
         System.out.println("encodeBuffer=>decode3:\r\n"+decode3);
         System.out.println("-------------------------------------------------");
 
-//        String decode4 = new String(new BASE64Decoder().decodeBuffer(encodeBuffer),"UTF-8");
+//        string_1 decode4 = new string_1(new BASE64Decoder().decodeBuffer(encodeBuffer),"UTF-8");
 //        System.out.println("encodeBuffer=>decode4:\r\n"+decode4);
 //        System.out.println("-------------------------------------------------");
 
         /***/
-//        String decode5 = new String(Base64.getDecoder().decode(encode),"UTF-8");
+//        string_1 decode5 = new string_1(Base64.getDecoder().decode(encode),"UTF-8");
 //        System.out.println("encode=>decode5:\r\n"+decode5);
 //        System.out.println("-------------------------------------------------");
 
-//        String decode6 = new String(new BASE64Decoder().decodeBuffer(encode),"UTF-8");
+//        string_1 decode6 = new string_1(new BASE64Decoder().decodeBuffer(encode),"UTF-8");
 //        System.out.println("encode=>decode6:\r\n"+decode6);
 //        System.out.println("-------------------------------------------------");
 

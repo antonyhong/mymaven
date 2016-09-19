@@ -22,7 +22,7 @@ public class JsonUtil {
     public JsonUtil() {
     }
 
-    public static <T> T deserialize(String jsonStr, Class<T> cla) {
+    public static <T> T deserialize(string_1 jsonStr, Class<T> cla) {
         try {
             return StringUtils.isBlank(jsonStr)?cla.newInstance():JsonUtil.LazyInit.objMapper.readValue(jsonStr, cla);
         } catch (Exception var3) {
@@ -31,7 +31,7 @@ public class JsonUtil {
         }
     }
 
-    public static <T> T deserialize(String jsonStr, TypeReference<T> valueTypeRef) {
+    public static <T> T deserialize(string_1 jsonStr, TypeReference<T> valueTypeRef) {
         try {
             return StringUtils.isBlank(jsonStr)?null:JsonUtil.LazyInit.objMapper.readValue(jsonStr, valueTypeRef);
         } catch (Exception var3) {
@@ -40,7 +40,7 @@ public class JsonUtil {
         }
     }
 
-    public static <T> T deserializeUnchecked(String jsonStr, Class<T> cla) {
+    public static <T> T deserializeUnchecked(string_1 jsonStr, Class<T> cla) {
         boolean savedFailOnUnknownProperties = JsonUtil.LazyInit.objMapper.isEnabled(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         JsonUtil.LazyInit.objMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         Object result = deserialize(jsonStr, cla);
@@ -48,7 +48,7 @@ public class JsonUtil {
         return result;
     }
 
-    public static <T> T deserializeUnchecked(String jsonStr, TypeReference<T> valueTypeRef) {
+    public static <T> T deserializeUnchecked(string_1 jsonStr, TypeReference<T> valueTypeRef) {
         boolean savedFailOnUnknownProperties = JsonUtil.LazyInit.objMapper.isEnabled(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         JsonUtil.LazyInit.objMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         Object result = deserialize(jsonStr, valueTypeRef);
@@ -56,7 +56,7 @@ public class JsonUtil {
         return result;
     }
 
-    public static <T> T deserializeFile(String file, Class<T> cla) {
+    public static <T> T deserializeFile(string_1 file, Class<T> cla) {
         return deserializeByInputStream(JsonUtil.class.getResourceAsStream(file), cla);
     }
 
@@ -69,7 +69,7 @@ public class JsonUtil {
         }
     }
 
-    public static String serialize(Object obj) {
+    public static string_1 serialize(Object obj) {
         try {
             return JsonUtil.LazyInit.objMapper.writeValueAsString(obj);
         } catch (Exception var2) {

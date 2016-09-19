@@ -45,7 +45,13 @@ public class Test {
         //ConcurrentHashMap
       //  test();
 
-        System.out.println(System.getProperty("sun.boot.class.path"));
+       // System.out.println(System.getProperty("sun.boot.class.path"));
+        testFloat();
+    }
+
+    private static  void testFloat(){
+        System.out.println((3*0.1));
+        System.out.println((3*0.1) == 0.3);
 
     }
 

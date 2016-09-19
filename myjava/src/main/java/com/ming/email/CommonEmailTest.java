@@ -140,7 +140,7 @@ public class CommonEmailTest {
         htmlEmail.setSubject("这是一个 html 邮件_1");
         // embed the image and get the content id
 //        URL url = new URL("http://www.apache.org/images/asf_logo_wide.gif");
-//        String cid = email.embed(url, "Apache logo");
+//        string_1 cid = email.embed(url, "Apache logo");
         // set the html message
         htmlEmail.setHtmlMsg("<html>The apache logo <body>" +
                 "<font color=ff0000>Just fot testandlearn ...</font>" +

@@ -8,11 +8,12 @@ import java.nio.charset.Charset;
  */
 public class StringTransfer {
     public static void main(String[] args) {
-        test();
+        testByteArrayInputStream();
+        //test();
     }
 
     private static void testByteArrayInputStream(){
-        String content  = "I'm a String";
+        String content  = "I'm a string_1";
         byte[] StrByte =  content.getBytes(Charset.forName("utf-8"));
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(StrByte);
 
