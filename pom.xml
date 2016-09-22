@@ -12,6 +12,7 @@
         <module>myjava</module>
         <module>mytools</module>
         <module>myquartz</module>
+        <module>rmi</module>
     </modules>
 
 
