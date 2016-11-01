@@ -1,4 +1,4 @@
-package com.ming.testandlearn.concurrent.guava;
+package com.ming.testandlearn.concurrent.ratelimiter;
 
 import com.google.common.util.concurrent.RateLimiter;
 
@@ -10,6 +10,10 @@ public class RateLimiterTest {
     public static void main(String[] args) {
         RateLimiter rateLimiter = RateLimiter .create(200);
 
-        //rateLimiter.acquire()
+        //阻塞方法
+        rateLimiter.acquire();
+
+        //非阻塞方法
+        rateLimiter.tryAcquire();
     }
 }
