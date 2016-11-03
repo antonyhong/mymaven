@@ -48,7 +48,7 @@ public class MultiResourceRateLimiter implements IMultiRateLimiter {
 //    }
 
 
-    public void updateResourceQps(String resource, double qps) {
+    public void addOrUpdateResourceQps(String resource, long qps) {
         RateLimiter limiter = resourceLimiterMap.get(resource);
         if (limiter == null) {
             limiter = RateLimiter.create(qps);
@@ -67,8 +67,8 @@ public class MultiResourceRateLimiter implements IMultiRateLimiter {
 
     public static void main(String[] args) throws InterruptedException {
         MultiResourceRateLimiter limiter = new MultiResourceRateLimiter();
-        limiter.updateResourceQps("url1", 10);
-        limiter.updateResourceQps("url2", 10);
+        limiter.addOrUpdateResourceQps("url1", 20);
+        limiter.addOrUpdateResourceQps("url2", 10);
 
 
         for (int i = 0; i < 3; i++) {
@@ -80,7 +80,7 @@ public class MultiResourceRateLimiter implements IMultiRateLimiter {
                     System.out.println(String.format("【%s】访问量过高，你被限流了",i+","+j));
                 }
             }
-            Thread.sleep(100);
+            Thread.sleep(200);
         }
     }
 

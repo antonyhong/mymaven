@@ -5,14 +5,10 @@ package com.ming.testandlearn.concurrent.ratelimiter;
  */
 public interface IMultiRateLimiter {
 
-    /**
-     * ask for accessing resource .
-     * if success then
-     *       return true;
-     * else
-     *      return false;
-     *the caller should handle this result;
-    */
+    void addOrUpdateResourceQps(String resource, long qps);
+
+    void  removeResource(String resource);
+
     boolean require(String resourceName);
 
     void release(String resourceName);
