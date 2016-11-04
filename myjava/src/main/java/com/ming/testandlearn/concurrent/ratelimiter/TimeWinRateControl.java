@@ -49,7 +49,6 @@ public class TimeWinRateControl implements IMultiRateLimiter {
 
     }
 
-
     private static class CounterCache {
         private long qps;
         LoadingCache<Long, AtomicLong> counter;
@@ -57,8 +56,7 @@ public class TimeWinRateControl implements IMultiRateLimiter {
         public CounterCache(long qps) {
             this.qps = qps;
             counter = CacheBuilder.newBuilder()
-                    // 时间窗口为 1s ，默认2秒过期 保证1秒内的计数器是有的
-                    .expireAfterWrite(2, TimeUnit.SECONDS)
+                    .expireAfterWrite(2, TimeUnit.SECONDS)// 时间窗口为 1s ，默认2秒过期 保证1秒内的计数器是有的
                     .build(new CacheLoader<Long, AtomicLong>() {
                         @Override
                         public AtomicLong load(Long seconds) throws Exception {
@@ -96,7 +94,6 @@ public class TimeWinRateControl implements IMultiRateLimiter {
         TimeWinRateControl limiter = new TimeWinRateControl();
         limiter.addOrUpdateResourceQps("url1", 10);
         limiter.addOrUpdateResourceQps("url2", 10);
-
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 12; j++) {
