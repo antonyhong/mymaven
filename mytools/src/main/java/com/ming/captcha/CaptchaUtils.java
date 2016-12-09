@@ -25,22 +25,25 @@ public class CaptchaUtils {
 	private static DoubleRippleFilterFactory doubleRippleFilterFactory = new DoubleRippleFilterFactory();
 	private static CurvesRippleFilterFactory curvesRippleFilterFactory;
 
-	private static BackgroundFactory backgroundFactory = new RandomBackGroudFactory();
+	private static BackgroundFactory backgroundFactory = new RandomBackGroundFactory();
 	private static Random random = new Random();
 	static {
 
 		randomWordFactory4.setMaxLength(4);
 		randomWordFactory4.setMinLength(4);
-		//srandomWordFactory4.setCharacters("2");
+
+		randomWordFactory4.setCharacters("ABSDEGKMNPWXabsdegkmnpwx23456789");
+		//randomWordFactory4.setCharacters("A");
 		//cs.setColorFactory(new SingleColorFactory(new Color(125, 60, 170)));
 		//cs.setColorFactory(new SingleColorFactory(Color.BLACK));
-		cs.setColorFactory(new GradientColorFactory());
+
 		curvesRippleFilterFactory = new CurvesRippleFilterFactory(cs.getColorFactory());
 
 
 	}
 
 	public static Captcha getCaptchaWithFourChar() {
+		cs.setColorFactory(new GradientColorFactory());
 		cs.setWordFactory(randomWordFactory4);
 		cs.setFilterFactory(doubleRippleFilterFactory);
 		//cs.setTextRenderer(new SimpleTextRenderer());
@@ -52,14 +55,13 @@ public class CaptchaUtils {
 
 	public static ConfigurableCaptchaService getNewCaptcha(){
 
-
 		ConfigurableCaptchaService captchaService = new ConfigurableCaptchaService();
-		captchaService.setColorFactory(new GradientColorFactory());
+		//captchaService.setColorFactory(new GradientColorFactory());
 		captchaService.setWordFactory(randomWordFactory4);
 		captchaService.setFilterFactory(new DoubleRippleFilterFactory());
 		captchaService.setTextRenderer(new RandomYBestFitTextRenderer());
 		//cs.setFilterFactory(new CustomFilterFilterFactory());
-		captchaService.setBackgroundFactory(new RandomBackGroudFactory());
+		captchaService.setBackgroundFactory(new RandomBackGroundFactory());
 
 		return captchaService;
 	}
