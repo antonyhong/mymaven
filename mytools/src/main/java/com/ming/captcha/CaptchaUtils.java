@@ -1,12 +1,12 @@
 package com.ming.captcha;
 
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Graphics2D;
+import java.awt.*;
+import java.awt.font.TextAttribute;
 import java.awt.image.BufferedImage;
 import java.awt.image.BufferedImageOp;
 import java.io.File;
 import java.io.IOException;
+import java.text.AttributedString;
 import java.util.List;
 import java.util.Random;
 
@@ -18,11 +18,7 @@ import org.patchca.color.SingleColorFactory;
 import org.patchca.filter.library.CurvesImageOp;
 import org.patchca.filter.library.DoubleRippleImageOp;
 import org.patchca.filter.predefined.CurvesRippleFilterFactory;
-import org.patchca.filter.predefined.DiffuseRippleFilterFactory;
-import org.patchca.filter.predefined.DoubleRippleFilterFactory;
-import org.patchca.filter.predefined.MarbleRippleFilterFactory;
 import org.patchca.filter.predefined.RippleFilterFactory;
-import org.patchca.filter.predefined.WobbleRippleFilterFactory;
 import org.patchca.service.Captcha;
 import org.patchca.service.ConfigurableCaptchaService;
 import org.patchca.word.RandomWordFactory;
@@ -33,27 +29,29 @@ import org.patchca.word.RandomWordFactory;
  *
  */
 public class CaptchaUtils {
-	private static ConfigurableCaptchaService cs = new ConfigurableCaptchaService();
+	private static ConfigurableCaptchaService captchServer = new ConfigurableCaptchaService();
 	private static RandomWordFactory randomWordFactory4 = new RandomWordFactory();
 
 	private static Random random = new Random();
 	static {
 		randomWordFactory4.setMaxLength(4);
 		randomWordFactory4.setMinLength(4);
-		randomWordFactory4.setCharacters("ABSDEGKMNPWXabsdegkmnpwx23456789");
+		//randomWordFactory4.setCharacters("ABSDEGKMNPWXabsdegkmnpwx23456789");
+		randomWordFactory4.setCharacters("n");
+		//randomWordFactory4.setCharacters("g9");
+		//randomWordFactory4.setCharacters("中华人民共和国");
 		//randomWordFactory4.setCharacters("A");
-		cs.setColorFactory(new SingleColorFactory(Color.BLACK));
+		captchServer.setColorFactory(new SingleColorFactory(Color.BLACK));
 	}
-	
 
 	public static Captcha getCaptchaWithFourChar() {
-		cs.setWordFactory(randomWordFactory4);
-//		cs.setFilterFactory(doubleRippleFilterFactory);
-		cs.setFilterFactory(new CustomFilterFactory());
-		cs.setBackgroundFactory(new NoisyLineBackGroundFactory());
-		return cs.getCaptcha();
+		captchServer.setWordFactory(randomWordFactory4);
+		//captchServer.setFilterFactory();
+		//captchServer.setFilterFactory(new CustomFilterFactory());
+		captchServer.setFilterFactory(new CurvesRippleFilterFactory());
+		//captchServer.setBackgroundFactory(new NoisyLineBackGroundFactory());
+		return captchServer.getCaptcha();
 	}
-	
 
 	public static class CustomFilterFactory extends RippleFilterFactory {
 	    //protected MarbleImageOp marble = new MarbleImageOp();
@@ -65,8 +63,8 @@ public class CaptchaUtils {
 	    @Override
 	    protected List<BufferedImageOp> getPreRippleFilters() {
 	        List<BufferedImageOp> list = super.getPreRippleFilters();
-	        list.add(curves);
-	        list.add(ripple);
+	        //list.add(curves);
+	        //list.add(ripple);
 	        return list;
 	    }
 
@@ -99,8 +97,8 @@ public class CaptchaUtils {
 	        graphics.fillRect(0, 0, imgWidth, imgHeight);
 	        //addNoisyPoint(graphics, imgWidth, imgHeight);
 	        graphics.setColor(Color.BLACK);
-	        //随机添加1 至 4 条干扰线
-	        int confuseLineCount = 1 + random.nextInt(2);
+	        //随机添加2 至 4 条干扰线
+	        int confuseLineCount = 2 + random.nextInt(2);
 	        for (int i = 0; i < confuseLineCount; i++) {
 	            // 随机位置
 	            int xInt = random.nextInt(imgWidth / 2) + 10;
@@ -125,11 +123,21 @@ public class CaptchaUtils {
 			String value = captcha.getChallenge();
 			BufferedImage image = captcha.getImage();
 
-			File file = new File("E:\\Test\\captcha\\wenta\\"+value+"_"+random.nextInt(10000)+".png");
+			File file = new File("E:\\Test\\captcha\\wenta\\test\\"+value+"_"+random.nextInt(10000)+".png");
 			//FileOutputStream imageOutStream = new FileOutputStream();
 			ImageIO.write(image,"png",file);
 		}
 
+	}
+
+	private static void testChinese(){
+		BufferedImage bufImage = new BufferedImage(100, 150, 2);
+		Graphics2D g = (Graphics2D )bufImage.getGraphics();
+
+		String str = "中华人民共和国";
+		AttributedString aString = new AttributedString(String.valueOf(str));
+		aString.addAttribute(TextAttribute.FONT, Font.DIALOG, 0, 1);
+		g.drawString(aString.getIterator(),10,50);
 	}
 	
 	
