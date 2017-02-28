@@ -9,7 +9,21 @@ import java.util.concurrent.TimeUnit;
 public class ThreadTest {
 
     public static void main(String[] args) throws InterruptedException {
-        testJoin();
+
+        long i=0;
+        System.out.println("begin...");
+        while (i < Long.MAX_VALUE) {
+
+            if (i % 10000 == 0) {
+                i = i + 5;
+            }
+            i++;
+            if (i % 10000000 == 0) {
+                System.out.println(i);
+            }
+        }
+       // System.out.println("end ...");
+        //testJoin();
     }
 
     public static void testWait(){

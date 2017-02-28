@@ -2,10 +2,7 @@ package compress.simpleimage;
 
 import com.alibaba.simpleimage.ImageRender;
 import com.alibaba.simpleimage.SimpleImageException;
-import com.alibaba.simpleimage.render.ReadRender;
-import com.alibaba.simpleimage.render.ScaleParameter;
-import com.alibaba.simpleimage.render.ScaleRender;
-import com.alibaba.simpleimage.render.WriteRender;
+import com.alibaba.simpleimage.render.*;
 import org.apache.commons.io.IOUtils;
 
 import java.io.File;
@@ -18,9 +15,13 @@ import java.io.IOException;
  */
 public class SimpleImageTest {
 
+    /***
+     *
+     * 运行代码有报错
+     * */
     public static void main(String[] args) throws IOException {
         String srcDir= "E:\\技术中心\\jpg压缩\\图片测试\\原图";
-        String destDir = "E:\\技术中心\\jpg压缩\\图片测试\\java60";
+        String destDir = "E:\\技术中心\\jpg压缩\\图片测试\\aliSI";
         File file = new File(srcDir);
         File[] files = file.listFiles();
         System.out.println("开始压缩图片...");
@@ -33,22 +34,22 @@ public class SimpleImageTest {
 
     }
 
-    private static void compress(File inImage,File outImage,float quality) throws IOException {
+    private static void compress(File in,File out,float quality) throws IOException {
         //File input = new File("digital_image_processing.jpg");
         ScaleParameter scaleParam = new ScaleParameter(1024, 1024);  //将图像缩略到1024x1024以内，不足1024x1024则不做任何处理
+
 
         FileInputStream inStream = null;
         FileOutputStream outStream = null;
         WriteRender wr = null;
         try {
-            inStream = new FileInputStream(inImage);
-            outStream = new FileOutputStream(outImage);
+            inStream = new FileInputStream(in);
+            outStream = new FileOutputStream(out);
             ImageRender rr = new ReadRender(inStream);
             ImageRender sr = new ScaleRender(rr, scaleParam);
             wr = new WriteRender(sr, outStream);
 
             wr.render();                            //触发图像处理
-
         } catch(Exception e) {
             e.printStackTrace();
         } finally {
