@@ -13,6 +13,8 @@
         <module>mytools</module>
         <module>myquartz</module>
         <module>rmi</module>
+        <module>test</module>
+        <module>image</module>
     </modules>
 
 

@@ -1,5 +1,7 @@
 package com.ming;
 
+import java.util.Timer;
+
 /**
  * Created by hongyongming on 2015/10/20.
  */
@@ -36,5 +38,16 @@ public class Student {
 
     public void setHobbby(String hobbby) {
         this.hobbby = hobbby;
+    }
+
+    public static void main(String[] args) {
+        String str ="hello";
+        byte[] bytes = str.getBytes();
+
+        String str2 = new String(bytes);
+
+        Timer timer = new Timer();
+        //timer.schedule();
+
     }
 }
