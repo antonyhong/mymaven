@@ -19,15 +19,16 @@ public class ImgCompression {
 
     public static void main(String[] args) throws IOException {
 
-        String srcDir= "E:\\技术中心\\jpg压缩\\图片测试\\原图";
-        String destDir = "E:\\技术中心\\jpg压缩\\图片测试\\java60";
+        String srcDir= "E:\\技术中心\\jpg压缩\\图片测试\\java75";
+        String destDir = "E:\\技术中心\\jpg压缩\\图片测试\\java75x2";
         File file = new File(srcDir);
         File[] files = file.listFiles();
         System.out.println("开始压缩图片...");
         long start = System.currentTimeMillis();
         for (File inFile : files){
             File outFile= new File(destDir+"\\"+inFile.getName());
-            compress(inFile,outFile,0.7f,getExtName(inFile.getName(),'.'));
+            compress(inFile, outFile, 0.75f, getExtName(inFile.getName(), '.'));
+
         }
         System.out.println("压缩完成图片,耗时:"+(System.currentTimeMillis()-start));
     }
@@ -40,12 +41,9 @@ public class ImgCompression {
 
     private static void compress(File inImage,File outImage,float quality,String suffix) throws IOException {
         //File input = new File("digital_image_processing.jpg");
-
         BufferedImage bufferedImage = ImageIO.read(inImage);
-
         //File compressedImageFile = new File("compress.jpg");
         OutputStream os =new FileOutputStream(outImage);
-
         Iterator<ImageWriter> writers =  ImageIO.getImageWritersByFormatName(suffix);
         ImageWriter imageWriter = (ImageWriter) writers.next();
 

@@ -1,5 +1,6 @@
 package com.ming;
 
+import java.util.Date;
 import java.util.Timer;
 
 /**
@@ -9,11 +10,27 @@ public class Student {
     private String name;
     private int age;
     private String hobbby;
+    private Date birthday;
 
     public Student(String name, int age, String hobbby) {
         this.name = name;
         this.age = age;
         this.hobbby = hobbby;
+    }
+
+    public Student(String name, int age, String hobbby, Date birthday) {
+        this.name = name;
+        this.age = age;
+        this.hobbby = hobbby;
+        this.birthday = birthday;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     public String getName() {

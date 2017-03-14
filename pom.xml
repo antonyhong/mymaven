@@ -15,6 +15,7 @@
         <module>rmi</module>
         <module>test</module>
         <module>image</module>
+        <module>algorithm</module>
     </modules>
 
 
