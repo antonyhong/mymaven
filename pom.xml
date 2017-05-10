@@ -16,6 +16,8 @@
         <module>test</module>
         <module>image</module>
         <module>algorithm</module>
+        <module>redis</module>
+        <module>nio</module>
     </modules>
 
 

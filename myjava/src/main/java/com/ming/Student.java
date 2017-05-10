@@ -12,6 +12,9 @@ public class Student {
     private String hobbby;
     private Date birthday;
 
+    public Student() {
+    }
+
     public Student(String name, int age, String hobbby) {
         this.name = name;
         this.age = age;
