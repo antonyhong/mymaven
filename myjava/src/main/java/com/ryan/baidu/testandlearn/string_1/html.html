@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div id="menuAuthority" class="ui-dialog-content ui-widget-content ui-accordion ui-widget ui-helper-reset"
+     role="tablist" style="width: auto; min-height: 18px; max-height: none; height: auto;"><h3
+        class="ui-accordion-header ui-state-default ui-accordion-header-active ui-state-active ui-corner-top ui-accordion-icons"
+        role="tab" id="ui-id-48" aria-controls="ui-id-49" aria-selected="true" aria-expanded="true" tabindex="0"><span
+        class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span>系统管理</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active"
+         id="ui-id-49" aria-labelledby="ui-id-48" role="tabpanel" aria-hidden="false" style="">
+        <ul>
+            <li><input type="checkbox" name="/role/list" itemid="101"><span>角色管理</span></li>
+            <li><input type="checkbox" name="/user/list" itemid="102"><span>用户管理</span></li>
+            <li><input type="checkbox" name="/department/list?limit=-1" itemid="103"><span>组织架构</span></li>
+            <li><input type="checkbox" name="/dict/list" itemid="104"><span>数据字典管理</span></li>
+            <li><input type="checkbox" name="/log/list" itemid="105"><span>日志管理</span></li>
+            <li><input type="checkbox" name="/jst/oums/notice/list" itemid="106"><span>公告管理</span></li>
+            <li><input type="checkbox" name="/jst/oums/handbook/list" itemid="107"><span>手册管理</span></li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-50"
+        aria-controls="ui-id-51" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>运维工具</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-51"
+         aria-labelledby="ui-id-50" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li><input type="checkbox" name="/jst/ywtool/sqlquery/list" itemid="201"><span>数据库查询</span></li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-52"
+        aria-controls="ui-id-53" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>job管理</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-53"
+         aria-labelledby="ui-id-52" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li><input type="checkbox" name="/jst/job/manual/list" itemid="211"><span>手动job</span></li>
+            <li><input type="checkbox" name="/jst/job/auto/list" itemid="212"><span>自动job</span></li>
+            <li><input type="checkbox" name="/jst/job/running/list" itemid="213"><span>job运行状态</span></li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-54"
+        aria-controls="ui-id-55" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>商城配置</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-55"
+         aria-labelledby="ui-id-54" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li><input type="checkbox" name="/jst/pms/config/warehouse" itemid="222"><span>仓库配置</span></li>
+            <li><input type="checkbox" name="/jst/pms/config/inv" itemid="223"><span>库存配置</span></li>
+            <li><input type="checkbox" name="/jst/pms/orderTextSet/list" itemid="224"><span>订单跟踪文案配置</span></li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-56"
+        aria-controls="ui-id-57" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>热补丁管理</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-57"
+         aria-labelledby="ui-id-56" role="tabpanel" aria-hidden="true" style="display: none;"></div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-58"
+        aria-controls="ui-id-59" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>reactNative管理</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-59"
+         aria-labelledby="ui-id-58" role="tabpanel" aria-hidden="true" style="display: none;"></div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-60"
+        aria-controls="ui-id-61" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>客服中心</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-61"
+         aria-labelledby="ui-id-60" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li class="parent"><input type="checkbox" name="客户管理" itemid="311"><span>客户管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/bgm/userManege/list" itemid="312"><span>用户管理</span></li>
+                    <li><input type="checkbox" name="/jst/bgm/compensate/list" itemid="313"><span>补偿单管理</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="订单管理" itemid="321"><span>订单管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/bgm/order/list" itemid="322"><span>订单查看</span></li>
+                    <li><input type="checkbox" name="/jst/bgm/address/list" itemid="323"><span>订单审核</span></li>
+                    <li><input type="checkbox" name="/jst/bgm/returnGoods/list" itemid="324"><span>退货审核</span></li>
+                    <li><input type="checkbox" name="/jst/bgm/returnMoney/list" itemid="325"><span>退款审核</span></li>
+                    <li><input type="checkbox" name="/jst/bgm/puzzleOrder/list" itemid="326"><span>疑难单管理</span></li>
+                    <li><input type="checkbox" name="/jst/bgm/resupplyInvoice/list" itemid="327"><span>补打发票管理</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="评价管理" itemid="331"><span>评价管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/bgm/commentVerify/list" itemid="332"><span>评价审核</span></li>
+                    <li><input type="checkbox" name="/jst/bgm/commentReply/list" itemid="333"><span>评价回复</span></li>
+                    <li><input type="checkbox" name="/jst/bgm/replyTmp/list" itemid="334"><span>回复模板管理</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="咨询/投诉管理" itemid="341"><span>咨询/投诉管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/bgm/complaint/add" itemid="342"><span>咨询/投诉录入</span></li>
+                    <li><input type="checkbox" name="/jst/bgm/complaint/complaintToDoList"
+                               itemid="343"><span>待处理投诉列表</span></li>
+                    <li><input type="checkbox" name="/jst/bgm/complaint/complaintList" itemid="344"><span>投诉查询列表</span>
+                    </li>
+                    <li><input type="checkbox" name="/jst/bgm/complaint/consultingList" itemid="345"><span>咨询查询列表</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-62"
+        aria-controls="ui-id-63" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Item信息查阅</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-63"
+         aria-labelledby="ui-id-62" role="tabpanel" aria-hidden="true" style="display: none;"></div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-64"
+        aria-controls="ui-id-65" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>专题/百科评论审核</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-65"
+         aria-labelledby="ui-id-64" role="tabpanel" aria-hidden="true" style="display: none;"></div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-66"
+        aria-controls="ui-id-67" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>通知中心</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-67"
+         aria-labelledby="ui-id-66" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li><input type="checkbox" name="/jst/msgsys/manual/list" itemid="401"><span>人工通知管理</span></li>
+            <li><input type="checkbox" name="/jst/msgsys/sys/list" itemid="402"><span>系统消息管理</span></li>
+            <li><input type="checkbox" name="/jst/msgsys/node/list" itemid="404"><span>消息节点管理</span></li>
+            <li><input type="checkbox" name="/jst/msgsys/log/list" itemid="405"><span>消息发送日志</span></li>
+            <li class="parent"><input type="checkbox" name="短信模板管理" itemid="406"><span>短信模板管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/msgsys/msgtmpl/list" itemid="407"><span>客服专用模板</span></li>
+                    <li><input type="checkbox" name="/jst/msgsys/msgtmpl/operateMsgTmpl"
+                               itemid="408"><span>运营专用模板</span></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-68"
+        aria-controls="ui-id-69" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>运营后台</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-69"
+         aria-labelledby="ui-id-68" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li><input type="checkbox" name="/jst/optsys/business/list" itemid="601"><span>商家管理</span></li>
+            <li><input type="checkbox" name="/jst/optsys/previewAccount/list" itemid="602"><span>预览账号管理</span></li>
+            <li><input type="checkbox" name="/jst/optsys/visualEdit/list" itemid="603"><span>楼层可视化编辑后台</span></li>
+            <li class="parent"><input type="checkbox" name="推广管理" itemid="604"><span>推广管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/optsys/extensionChannel/list"
+                               itemid="4100"><span>推广包渠道管理</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/appChannel/list" itemid="4102"><span>APP渠道包管理</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="内容体系" itemid="611"><span>内容体系</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/optsys/optType/list" itemid="612"><span>运营位</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/optCnt/list" itemid="613"><span>运营位内容</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/floorStyle/list" itemid="614"><span>三端样式管理</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/floorManage/list" itemid="615"><span>楼层管理</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/blockManage/list " itemid="616"><span>版块管理</span></li>
+                    <li class="parent"><input type="checkbox" name="/jst/optsys/specialtopic/list" itemid="617"><span>专题管理</span>
+                        <ul>
+                            <li><input type="checkbox" name="/jst/optsys/specialtopic/list"
+                                       itemid="618"><span>专题内容管理</span></li>
+                            <li><input type="checkbox" name="/jst/optsys/specialType/list"
+                                       itemid="619"><span>专题分类管理</span></li>
+                            <li><input type="checkbox" name="/jst/optsys/blockTemplate/list "
+                                       itemid="620"><span>专题模版管理</span></li>
+                        </ul>
+                    </li>
+                    <li><input type="checkbox" name="/jst/optsys/itemGroup/list" itemid="621"><span>商品组管理</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/iconTagManage/list" itemid="622"><span>角标管理</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/contentPublish/list" itemid="628"><span>内容发布</span>
+                    </li>
+                    <li><input type="checkbox" name="/jst/optsys/mobileOpms/list" itemid="629"><span>移动端类别</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/webCategory/list" itemid="630"><span>Web端类别</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/agePage/list" itemid="631"><span>大家都在买推荐</span></li>
+                    <li><input type="checkbox" name=" /jst/optsys/docManage/list" itemid="638"><span>文案管理</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="优惠管理" itemid="624"><span>优惠管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/optsys/coupon/list" itemid="625"><span>优惠券管理</span></li>
+                    <li><input type="checkbox" name="/jst/opms/combinebuy/list" itemid="626"><span>组合购</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/freePost/list" itemid="627"><span>包邮管理</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/firstDiscount/list" itemid="632"><span>首单优惠管理</span>
+                    </li>
+                    <li><input type="checkbox" name="/jst/optsys/discountManage/list" itemid="635"><span>立减管理</span>
+                    </li>
+                    <li><input type="checkbox" name="/jst/optsys/XChooseNum/list" itemid="636"><span>X元选N件</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/nodeManager/list" itemid="637"><span>积分节点管理</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/limitPurchase/list" itemid="641"><span>限购管理</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="员工福利" itemid="633"><span>员工福利</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/optsys/memberImport/list" itemid="634"><span>内部员工导入</span>
+                    </li>
+                </ul>
+            </li>
+            <li><input type="checkbox" name="/jst/optsys/lottery/list" itemid="639"><span>抽奖活动配置</span></li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-70"
+        aria-controls="ui-id-71" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>商品信息</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-71"
+         aria-labelledby="ui-id-70" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li class="parent"><input type="checkbox" name="Item管理" itemid="701"><span>Item管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/product/list" itemid="710"><span>Item信息管理</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/productComment/list" itemid="714"><span>商品评价运营</span>
+                    </li>
+                    <li><input type="checkbox" name="/jst/optsys/productPurchase/list" itemid="716"><span>图文品购管理</span>
+                    </li>
+                    <li class="parent"><input type="checkbox" name="标签管理" itemid="740"><span>标签管理</span>
+                        <ul>
+                            <li><input type="checkbox" name="/jst/pms/labelType/list" itemid="742"><span>标签分类管理</span>
+                            </li>
+                            <li><input type="checkbox" name="/jst/pms/labelItem/list  "
+                                       itemid="743"><span>Item标签管理</span></li>
+                        </ul>
+                    </li>
+                    <li><input type="checkbox" name="/serviceTag/list" itemid="760"><span>服务标识管理</span></li>
+                    <li><input type="checkbox" name="/dictionary/list" itemid="770"><span>搜索词库管理</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="SKU管理" itemid="702"><span>SKU管理</span>
+                <ul>
+                    <li class="parent"><input type="checkbox" name="库存管理" itemid="711"><span>库存管理</span>
+                        <ul>
+                            <li><input type="checkbox" name="/jst/scm/channelinv/list" itemid="712"><span>京东天猫库存</span>
+                            </li>
+                            <li><input type="checkbox" name="/jst/pms/config/inv" itemid="713"><span>商城库存管理</span></li>
+                        </ul>
+                    </li>
+                    <li><input type="checkbox" name="/skuMain/list?isActivated=Y" itemid="720"><span>SKU信息管理</span></li>
+                    <li class="parent"><input type="checkbox" name="价格管理" itemid="725"><span>价格管理</span>
+                        <ul>
+                            <li><input type="checkbox" name="/jst/pms/priceVerify/list" itemid="726"><span>价格审核</span>
+                            </li>
+                            <li><input type="checkbox" name="/jst/pms/priceImport/list" itemid="727"><span>价格导入</span>
+                            </li>
+                            <li><input type="checkbox" name="/jst/pms/verifyConfig/list"
+                                       itemid="728"><span>审核流程配置</span></li>
+                            <li><input type="checkbox" name="/jst/pms/competitorPrice/list"
+                                       itemid="780"><span>竞品比价</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="品类管理" itemid="730"><span>品类管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/category/list" itemid="731"><span>商城品类管理</span></li>
+                    <li><input type="checkbox" name="/category/associativeList" itemid="732"><span>前后分类关联</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/mobileOpms/list" itemid="733"><span>移动端品类文案</span></li>
+                    <li><input type="checkbox" name="/jst/optsys/webCategory/list" itemid="734"><span>Web端品类文案</span>
+                    </li>
+                </ul>
+            </li>
+            <li><input type="checkbox" name="/brand/list" itemid="750"><span>品牌管理</span></li>
+            <li><input type="checkbox" name="/jst/pms/keyword/list" itemid="781"><span>SEO词库管理</span></li>
+            <li><input type="checkbox" name="/jst/pms/SEOTDK/list" itemid="782"><span>TDK管理</span></li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-72"
+        aria-controls="ui-id-73" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>统计</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-73"
+         aria-labelledby="ui-id-72" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li class="parent"><input type="checkbox" name="性能监控" itemid="810"><span>性能监控</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/tableForm/list" itemid="811"><span>单站点，多请求</span></li>
+                    <li><input type="checkbox" name="/jst/fieldCompare/chart" itemid="812"><span>单站点，单请求</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="报表" itemid="820"><span>报表</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/report/list" itemid="821"><span>日报表</span></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-74"
+        aria-controls="ui-id-75" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>代销直发</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-75"
+         aria-labelledby="ui-id-74" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li><input type="checkbox" name="/jst/dfs/manage/list" itemid="901"><span>代销直发管理</span></li>
+            <li><input type="checkbox" name="/jst/dfs/import/list" itemid="902"><span>水奶库存导入</span></li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-76"
+        aria-controls="ui-id-77" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>客退和收货管理</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-77"
+         aria-labelledby="ui-id-76" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li><input type="checkbox" name="/jst/returnReceipt/receipt/list" itemid="1001"><span>收货管理</span></li>
+            <li><input type="checkbox" name="/jst/returnReceipt/return/list" itemid="1002"><span>客退管理</span></li>
+            <li class="parent"><input type="checkbox" name="客退收包" itemid="1003"><span>客退收包</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/receiptOpr/receiptOpr/list?type=1" itemid="1004"><span>客退收包(国内)</span>
+                    </li>
+                    <li><input type="checkbox" name="/jst/receiptOpr/receiptOpr/list?type=2" itemid="1005"><span>客退收包(国外)</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="上架管理" itemid="1006"><span>上架管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/rf/rf/list?type=1" itemid="1007"><span>RF上架(国内)</span></li>
+                    <li><input type="checkbox" name="/jst/rf/rf/list?type=2" itemid="1008"><span>RF上架(国外)</span></li>
+                    <li><input type="checkbox" name="/jst/rf/putawayDeal/list" itemid="1009"><span>上架异常处理</span></li>
+                    <li><input type="checkbox" name="/jst/rf/putawayManage/list" itemid="1010"><span>上架管理</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="订单管理" itemid="1011"><span>订单管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/order/logistics/list" itemid="1012"><span>物流单/发票号信息维护</span>
+                    </li>
+                    <li><input type="checkbox" name="/jst/basics/warehouse/list" itemid="1024"><span>仓库信息</span></li>
+                    <li><input type="checkbox" name="/jst/basics/area/list" itemid="1025"><span>地址库信息</span></li>
+                    <li><input type="checkbox" name="/jst/basics/carrierInfo/list" itemid="1026"><span>承运商信息</span></li>
+                    <li><input type="checkbox" name="/jst/basics/carrierLevel/list" itemid="1027"><span>承运商优先级</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="仓存管理(海外)" itemid="1013"><span>仓存管理(海外)</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/storage/invoiceExport/list"
+                               itemid="1014"><span>更新销售发票(海外)</span></li>
+                    <li><input type="checkbox" name="/jst/storage/allocationExport/list"
+                               itemid="1015"><span>导入调拨单(海外)</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="财务模块（国内）" itemid="1016"><span>财务模块（国内）</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/saleInvoice/domestic/list" itemid="1017"><span>销售发票与销售出库单关联（国内）</span>
+                    </li>
+                    <li><input type="checkbox" name="/jst/saleInvoice/domestic/update" itemid="1018"><span>更新销售发票出库成本(国内)</span>
+                    </li>
+                    <li><input type="checkbox" name="/jst/saleInvoice/domestic/monthly"
+                               itemid="1022"><span>月结刷新一级品类(国内)</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="财务模块（国外）" itemid="1019"><span>财务模块（国外）</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/saleInvoice/abroad/list"
+                               itemid="1020"><span>销售发票与销售出库单关联（国外）</span></li>
+                    <li><input type="checkbox" name="/jst/saleInvoice/abroad/update"
+                               itemid="1021"><span>更新销售发票出库成本(国外)</span></li>
+                    <li><input type="checkbox" name="/jst/saleInvoice/abroad/monthly"
+                               itemid="1023"><span>月结刷新一级品类(国外)</span></li>
+                </ul>
+            </li>
+            <li><input type="checkbox" name="/jst/returnReceipt/waybill/list" itemid="1028"><span>直发/补打发票信息维护</span>
+            </li>
+            <li class="parent"><input type="checkbox" name="仓库管理(国内)" itemid="1029"><span>仓库管理(国内)</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/storage/allocationExport/domestic" itemid="1030"><span>导入调拨单(国内)</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-78"
+        aria-controls="ui-id-79" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>ERP监控站点</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-79"
+         aria-labelledby="ui-id-78" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li><input type="checkbox" name="/jst/erpmonitor/quartz/cbs/list" itemid="1101"><span>cbs站点监控</span></li>
+            <li><input type="checkbox" name="/jst/erpmonitor/quartz/sms/list" itemid="1102"><span>sms站点监控</span></li>
+            <li><input type="checkbox" name="/jst/erpmonitor/quartz/dfs/list" itemid="1103"><span>dfs站点监控</span></li>
+            <li><input type="checkbox" name="/jst/erpmonitor/quartz/kd_extension/list" itemid="1104"><span>kd_extension站点监控</span>
+            </li>
+            <li><input type="checkbox" name="/jst/erpmonitor/quartz/kdreturn/list"
+                       itemid="1105"><span>kdreturn站点监控</span></li>
+            <li><input type="checkbox" name="/jst/erpmonitor/quartz/erpmonitor/list"
+                       itemid="1106"><span>ERP监控站点监控</span></li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-80"
+        aria-controls="ui-id-81" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>微信公众号管理</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-81"
+         aria-labelledby="ui-id-80" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li><input type="checkbox" name="/jst/weixinms/autoReply/list" itemid="1201"><span>自动回复</span></li>
+            <li><input type="checkbox" name="/jst/weixinms/customMenu/list" itemid="1202"><span>自定义菜单</span></li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-82"
+        aria-controls="ui-id-83" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>知识库</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-83"
+         aria-labelledby="ui-id-82" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li><input type="checkbox" name="/jst/knowledge/authorInfo/list" itemid="1301"><span>作者管理</span></li>
+            <li><input type="checkbox" name="/jst/knowledge/wordInfo/list" itemid="1302"><span>词条管理</span></li>
+            <li><input type="checkbox" name="/jst/knowledge/specialColumn/list" itemid="1303"><span>专栏管理</span></li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-84"
+        aria-controls="ui-id-85" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>选品系统</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-85"
+         aria-labelledby="ui-id-84" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li class="parent"><input type="checkbox" name="基础信息" itemid="1401"><span>基础信息</span>
+                <ul>
+                    <li><input type="checkbox" name="/brand/list" itemid="1402"><span>品牌管理</span></li>
+                    <li><input type="checkbox" name="/category/list?limit=-1" itemid="1403"><span>品类管理</span></li>
+                    <li><input type="checkbox" name="/ComparePlaform/list" itemid="1404"><span>比价平台管理</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="选品管理" itemid="1405"><span>选品管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/product/list" itemid="1406"><span>商品管理</span></li>
+                    <li><input type="checkbox" name="/skuProduct/list" itemid="1407"><span>商品条码</span></li>
+                    <li><input type="checkbox" name="/price/productlist" itemid="1408"><span>比价助手</span></li>
+                    <li><input type="checkbox" name="/jst/sys/skuVerify/list" itemid="1409"><span>商品审核</span></li>
+                    <li><input type="checkbox" name="/jst/sys/datafull/list" itemid="1410"><span>商品资料完整性配置</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="数据分析" itemid="1411"><span>数据分析</span>
+                <ul>
+                    <li><input type="checkbox" name="/price/analy" itemid="1412"><span>比价分析</span></li>
+                    <li><input type="checkbox" name="/scAnalysis/supplychain" itemid="1413"><span>供应链成本分析</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="分析工具" itemid="1414"><span>分析工具</span>
+                <ul>
+                    <li><input type="checkbox" name="/scAnalysis/calculation" itemid="1415"><span>成本分析工具</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="报表管理" itemid="1416"><span>报表管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/report/skuProductList" itemid="1417"><span>商品条码查询</span></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-86"
+        aria-controls="ui-id-87" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>商户管理后台</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-87"
+         aria-labelledby="ui-id-86" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li><input type="checkbox" name="/jst/cpsadmin/merchant/list" itemid="2003"><span>商户管理</span></li>
+            <li><input type="checkbox" name="/jst/cpsadmin/order/list" itemid="2006"><span>订单明细</span></li>
+            <li><input type="checkbox" name="/jst/cpsadmin/settlement/list" itemid="2009"><span>结算审核</span></li>
+            <li><input type="checkbox" name="/jst/cpsadmin/notice/list" itemid="2012"><span>公告管理</span></li>
+            <li><input type="checkbox" name="/jst/cpsadmin/contact/list" itemid="2015"><span>联系我们</span></li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-88"
+        aria-controls="ui-id-89" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>跨境通关系统</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-89"
+         aria-labelledby="ui-id-88" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li class="parent"><input type="checkbox" name="系统配置" itemid="3000"><span>系统配置</span>
+                <ul>
+                    <li><input type="checkbox" name="/sysconf/confpage" itemid="3004"><span>系统参数配置</span></li>
+                    <li><input type="checkbox" name="/log/list" itemid="3006"><span>日志管理</span></li>
+                    <li><input type="checkbox" name="/jst/syscheck/check/list" itemid="3008"><span>监控配置</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="基础资料" itemid="3009"><span>基础资料</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/basics/customs/list" itemid="3010"><span>海关信息</span></li>
+                    <li><input type="checkbox" name="/jst/basics/ciq/list" itemid="3011"><span>国检信息</span></li>
+                    <li><input type="checkbox" name="/jst/basics/platform/list" itemid="3012"><span>平台企业信息</span></li>
+                    <li><input type="checkbox" name="/jst/basics/cust/list" itemid="3013"><span>服务商信息</span></li>
+                    <li><input type="checkbox" name="/jst/basics/warehouse/list" itemid="3014"><span>仓库信息</span></li>
+                    <li><input type="checkbox" name="/jst/basics/area/list" itemid="3015"><span>地址库信息</span></li>
+                    <li><input type="checkbox" name="/jst/basics/carrierLevel/list" itemid="3016"><span>承运商优先级</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="商品备案" itemid="3017"><span>商品备案</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/recProduct/recProduct/list" itemid="3018"><span>商品备案</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="订单管理" itemid="3019"><span>订单管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/order/order/list" itemid="3020"><span>订单管理</span></li>
+                    <li><input type="checkbox" name="/jst/order/taxSearch/list" itemid="3021"><span>订单税费查询</span></li>
+                    <li><input type="checkbox" name="/jst/order/taxPriceSearch/list"
+                               itemid="3022"><span>订单税费及金额查询</span></li>
+                    <li><input type="checkbox" name="/jst/order/exception/list" itemid="3023"><span>订单异常监控</span></li>
+                </ul>
+            </li>
+            <li class="parent"><input type="checkbox" name="库存管理" itemid="3024"><span>库存管理</span>
+                <ul>
+                    <li><input type="checkbox" name="/jst/inventory/inbReceipt/list" itemid="3025"><span>入库管理</span>
+                    </li>
+                    <li><input type="checkbox" name="/jst/inventory/delivery/list" itemid="3026"><span>其他出库单管理</span>
+                    </li>
+                    <li><input type="checkbox" name="/jst/inventory/orderDelivery/list"
+                               itemid="3027"><span>订单出库明细管理</span></li>
+                    <li><input type="checkbox" name="/jst/inventory/inventory/list" itemid="3028"><span>库存管理</span></li>
+                    <li><input type="checkbox" name="/jst/inventory/history/list" itemid="3029"><span>库存交易管理</span></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-90"
+        aria-controls="ui-id-91" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>平台分销</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-91"
+         aria-labelledby="ui-id-90" role="tabpanel" aria-hidden="true" style="display: none;">
+        <ul>
+            <li><input type="checkbox" name="/jst/scm/channelinv/list" itemid="3101"><span>平台库存</span></li>
+        </ul>
+    </div>
+    <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-92"
+        aria-controls="ui-id-93" aria-selected="false" aria-expanded="false" tabindex="-1"><span
+            class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>用户标记管理</h3>
+
+    <div class="multi-menu-select ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-id-93"
+         aria-labelledby="ui-id-92" role="tabpanel" aria-hidden="true" style="display: none;"></div>
+</div>
+
+</body>
+</html>

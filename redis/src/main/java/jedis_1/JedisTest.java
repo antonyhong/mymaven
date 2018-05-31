@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public class JedisTest {
     public static void main(String[] args) {
-        JedisPool jedisPool = new JedisPool("10.18.20.2", 6379);
+        JedisPool jedisPool = new JedisPool("10.17.2.72", 6379);
 
         Jedis jedis = jedisPool.getResource();
         String studentKey = "myHashMapkey1";

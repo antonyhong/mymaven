@@ -18,9 +18,11 @@ import java.util.Map;
  */
 public class RedissionTest {
     public static void main(String[] args) {
+
+
         //创建配置信息
         Config config = new Config();
-        config.setCodec(new StringCodec()).useSingleServer().setAddress("10.18.20.2:6379").setConnectionPoolSize(10);
+        config.setCodec(new StringCodec()).useSingleServer().setAddress("10.17.2.72:6379").setConnectionPoolSize(10);
 
         RedissonClient redisson = Redisson.create(config);
 
